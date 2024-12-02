@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loader.classList.add('hide-loading');
         mainContent.classList.add('show-mainContent');
    
-    }, 4000);
+    }, 2000);
 
     const intro = document.querySelector('.intro');
 
