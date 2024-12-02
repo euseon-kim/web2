@@ -22,7 +22,34 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     top: 0;
     left: 0;
     opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
+.wave {
+    opacity: .4;
+    position: absolute;
+    bottom: 3%;
+    top: 50%;
+    /* left: 50%; */
+    background: black;
+    width: 4000px;
+    height: 4000px;
+    /* margin-left: -150px; */
+    /* margin-bottom: -301px; */
+    /* transform-origin: 50% 48%; */
+    border-radius: 43%;
+    
+    transition-duration: 0.75s;
+    transition-property: margin-bottom;
+    transition-timing-function: ease;
+    margin-bottom: -250px;
+    animation: rotate 2000ms infinite linear;
+  }
+
+  
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+  }
 
 .intro {
     background-image: url(image/intro.jpg);
