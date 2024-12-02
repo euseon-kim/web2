@@ -11,7 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // wrap.style.transform = 'translate(-50%, -50%)';
     // wrap.style.overflow = 'hidden';
     // wrap.style.cursor = 'grab';
-    
+
+    const loader = document.querySelector('.loading');
+    const mainContent = document.querySelector('.mainContent');
+
+    setTimeout(function () {
+        loader.classList.add('hide-loading');
+        mainContent.classList.add('show-mainContent');
+   
+    }, 4000);
+
     const intro = document.querySelector('.intro');
 
     intro.addEventListener('click', function () {
@@ -20,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
             intro.style.display = 'none'; 
         }, 500);
     });
-
 })
 
 const wrap = document.querySelector('.wrap');
@@ -37,6 +45,8 @@ wrap.addEventListener('mousedown', (e) => {
 });
 
 wrap.addEventListener('mousemove', (e) => {
+
+    const box = document.querySelector('.wrap');
     if (!isDragging) return;  
 
     const moveX = e.pageX - startX;  
@@ -51,8 +61,8 @@ wrap.addEventListener('mousemove', (e) => {
     // if(moveX > 950 || moveY < -715) return;
     // if(moveX < -950 || moveY < -715 ) return;
     
-
     wrap.style.transform = `translate(-50%, -50%) translate(${moveX}px, ${moveY}px)`;
+   
 });
 
 wrap.addEventListener('mouseup', () => {
