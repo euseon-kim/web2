@@ -1,6 +1,6 @@
 body, html {margin: 0; padding: 0; overflow: hidden;}
 
-.scrollBox{width: 400vh; height: 250vh; position: relative; overflow: visible;}
+/* #scrollBox{width: 400vh; height: 250vh; position: relative; overflow: visible;} */
 .wrap {
     background-image: url(image/bg.jpg);
     width: 400vh;
