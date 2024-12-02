@@ -11,7 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // wrap.style.transform = 'translate(-50%, -50%)';
     // wrap.style.overflow = 'hidden';
     // wrap.style.cursor = 'grab';
+    
+    const intro = document.querySelector('.intro');
 
+    intro.addEventListener('click', function () {
+        intro.style.opacity = '0'; 
+        setTimeout(function() {
+            intro.style.display = 'none'; 
+        }, 500);
+    });
 
 })
 
@@ -42,6 +50,7 @@ wrap.addEventListener('mousemove', (e) => {
     // if(moveX < -950 || moveY > 715) return;
     // if(moveX > 950 || moveY < -715) return;
     // if(moveX < -950 || moveY < -715 ) return;
+    
 
     wrap.style.transform = `translate(-50%, -50%) translate(${moveX}px, ${moveY}px)`;
 });
