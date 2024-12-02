@@ -38,10 +38,10 @@ wrap.addEventListener('mousemove', (e) => {
     offsetY = moveY;
     console.log(`${moveX}`)
     console.log(`${moveY}`)
-    // if(moveX > 950 || moveY > 715) return;
-    // if(moveX < -950 || moveY > 715) return;
-    // if(moveX > 950 || moveY < -715) return;
-    // if(moveX < -950 || moveY < -715 ) return;
+    if(moveX > 950 || moveY > 715) return;
+    if(moveX < -950 || moveY > 715) return;
+    if(moveX > 950 || moveY < -715) return;
+    if(moveX < -950 || moveY < -715 ) return;
 
     wrap.style.transform = `translate(-50%, -50%) translate(${moveX}px, ${moveY}px)`;
 });
