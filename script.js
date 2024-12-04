@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const wrap = document.querySelector('.wrap');
 let isDragging = false;  
 let startX, startY;    
-const offsetX = 1900, offsetY = 1180; 
+const offsetX = 1900, offsetY = 1190; 
 
 wrap.addEventListener('mousedown', (e) => {
     isDragging = true;  
@@ -126,7 +126,7 @@ wrap.addEventListener('mousemove', (e) => {
     // } 
 
     wrap.style.left = `${newX}px`;
-  wrap.style.top = `${newY}px`;
+    wrap.style.top = `${newY}px`;
 
 });
 
