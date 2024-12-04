@@ -28,15 +28,72 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 })
 
+// const wrap = document.querySelector('.wrap');
+// const isDragging = false;  
+// let startX, startY;    
+// const offsetX = 0, offsetY = 0; 
+
+// wrap.addEventListener('mousedown', (e) => {
+//     isDragging = true;  
+//     startX = e.pageX - offsetX;  
+//     startY = e.pageY - offsetY;  
+//     wrap.style.cursor = 'grabbing';
+//     e.preventDefault();
+// });
+
+// wrap.addEventListener('mousemove', (e) => {
+
+//     const box = document.querySelector('.wrap');
+//     if (!isDragging) return;  
+
+//     const moveX = e.pageX - startX;  
+//     const moveY = e.pageY - startY; 
+
+//     offsetX = moveX;  
+//     offsetY = moveY;
+//     // console.log(`${moveX}`)
+//     // console.log(`${moveY}`)
+//     console.log(`${offsetX}`)
+//     console.log(`${offsetY}`)
+//     // if(moveX > 950 || moveY > 715) {
+//     //     isDragging = false;
+//     // }
+//     // if(moveX < -950 || moveY > 715) {
+//     //     isDragging = false;
+//     // }
+//     // if(moveX > 950 || moveY < -715) {
+//     //     isDragging = false;
+//     // }
+//     // if(moveX < -950 || moveY < -715 ) {
+//     //     isDragging = false;
+//     // } 
+
+//     wrap.style.transform = `translate(-50%, -50%) translate(${moveX}px, ${moveY}px)`;
+
+// });
+
+// wrap.addEventListener('mouseup', () => {
+
+    
+//     isDragging = false; 
+//     wrap.style.cursor = 'grab';
+// });
+
+// wrap.addEventListener('mouseleave', () => {
+//     isDragging = false;
+//     wrap.style.cursor = 'grab';
+// });
+
+
 const wrap = document.querySelector('.wrap');
 let isDragging = false;  
 let startX, startY;    
-let offsetX = 0, offsetY = 0; 
+const offsetX = 1900, offsetY = 1180; 
 
 wrap.addEventListener('mousedown', (e) => {
     isDragging = true;  
-    startX = e.pageX - offsetX;  
-    startY = e.pageY - offsetY;  
+    startX = e.clientX - wrap.offsetLeft;
+    startY = e.clientY - wrap.offsetTop;
     wrap.style.cursor = 'grabbing';
     e.preventDefault();
 });
@@ -46,33 +103,34 @@ wrap.addEventListener('mousemove', (e) => {
     const box = document.querySelector('.wrap');
     if (!isDragging) return;  
 
-    const moveX = e.pageX - startX;  
-    const moveY = e.pageY - startY; 
+    let newX = e.clientX - startX;
+    let newY = e.clientY - startY;
 
-    offsetX = moveX;  
-    offsetY = moveY;
-    console.log(`${moveX}`)
-    console.log(`${moveY}`)
-    if(moveX > 950 || moveY > 715) {
-        isDragging = false;
-    }
-    if(moveX < -950 || moveY > 715) {
-        isDragging = false;
-    }
-    if(moveX > 950 || moveY < -715) {
-        isDragging = false;
-    }
-    if(moveX < -950 || moveY < -715 ) {
-        isDragging = false;
-    } 
-    
-    wrap.style.transform = `translate(-50%, -50%) translate(${moveX}px, ${moveY}px)`;
+    newX = Math.min(newX, offsetX);
+    newX = Math.max(newX, 0);
+    newY = Math.min(newY, offsetY);
+    newY = Math.max(newY, 0);
+    console.log(`${offsetX}`)
+    console.log(`${offsetY}`)
+    // if(moveX > 950 || moveY > 715) {
+    //     isDragging = false;
+    // }
+    // if(moveX < -950 || moveY > 715) {
+    //     isDragging = false;
+    // }
+    // if(moveX > 950 || moveY < -715) {
+    //     isDragging = false;
+    // }
+    // if(moveX < -950 || moveY < -715 ) {
+    //     isDragging = false;
+    // } 
+
+    wrap.style.left = `${newX}px`;
+  wrap.style.top = `${newY}px`;
 
 });
 
 wrap.addEventListener('mouseup', () => {
-
-    
     isDragging = false; 
     wrap.style.cursor = 'grab';
 });
