@@ -71,6 +71,8 @@ wrap.addEventListener('mousemove', (e) => {
 });
 
 wrap.addEventListener('mouseup', () => {
+
+    
     isDragging = false; 
     wrap.style.cursor = 'grab';
 });
