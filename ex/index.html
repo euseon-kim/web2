@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragscroll Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* 전체 스크롤바 숨김 */
+        }
+        .dragscroll {
+            width: 100vw; /* 화면 전체 */
+            height: 100vh; /* 화면 전체 */
+            overflow: hidden; /* 스크롤바 숨김 */
+            cursor: grab;
+            position: relative;
+        }
+        .content {
+            width: 4000px; /* 배경 이미지 크기 */
+            height: 2500px;
+            background: url('bg.jpg') no-repeat center center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="dragscroll">
+        <div class="content"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/dragscroll/dragscroll.min.js"></script>
+    <script>
+        // 초기 화면 중앙으로 설정
+        window.onload = function () {
+            const dragscroll = document.querySelector('.dragscroll');
+            const content = document.querySelector('.content');
+
+            // 드래그 가능한 영역 크기
+            const contentWidth = content.offsetWidth;
+            const contentHeight = content.offsetHeight;
+
+            // 화면 크기
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+
+            // 중앙 위치 계산
+            const centerX = (contentWidth - viewportWidth) / 2;
+            const centerY = (contentHeight - viewportHeight) / 2;
+
+            // 초기 스크롤 위치 설정
+            dragscroll.scrollLeft = centerX;
+            dragscroll.scrollTop = centerY;
+        };
+    </script>
+</body>
+</html>
