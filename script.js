@@ -26,6 +26,26 @@ document.addEventListener("DOMContentLoaded", function () {
             intro.style.display = 'none'; 
         }, 500);
     });
+
+    const dragscroll = document.querySelector('.dragscroll');
+    const content = document.querySelector('.content');
+
+    // 드래그 가능한 영역 크기
+    const contentWidth = content.offsetWidth;
+    const contentHeight = content.offsetHeight;
+
+    // 화면 크기
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    // 중앙 위치 계산
+    const centerX = (contentWidth - viewportWidth) / 2;
+    const centerY = (contentHeight - viewportHeight) / 2;
+
+    // 초기 스크롤 위치 설정
+    dragscroll.scrollLeft = centerX;
+    dragscroll.scrollTop = centerY;
+    
 })
 
 // const wrap = document.querySelector('.wrap');
@@ -85,60 +105,60 @@ document.addEventListener("DOMContentLoaded", function () {
 // });
 
 
-const wrap = document.querySelector('.wrap');
-let isDragging = false;  
-let startX, startY;    
-const offsetX = 1920, offsetY = 1190; 
+// const wrap = document.querySelector('.wrap');
+// let isDragging = false;  
+// let startX, startY;    
+// const offsetX = 1920, offsetY = 1190; 
 
-wrap.addEventListener('mousedown', (e) => {
-    isDragging = true;  
-    startX = e.clientX - wrap.offsetLeft;
-    startY = e.clientY - wrap.offsetTop;
-    wrap.style.cursor = 'grabbing';
-    e.preventDefault();
-});
+// wrap.addEventListener('mousedown', (e) => {
+//     isDragging = true;  
+//     startX = e.clientX - wrap.offsetLeft;
+//     startY = e.clientY - wrap.offsetTop;
+//     wrap.style.cursor = 'grabbing';
+//     e.preventDefault();
+// });
 
-wrap.addEventListener('mousemove', (e) => {
+// wrap.addEventListener('mousemove', (e) => {
 
-    const box = document.querySelector('.wrap');
-    if (!isDragging) return;  
+//     const box = document.querySelector('.wrap');
+//     if (!isDragging) return;  
 
-    let newX = e.clientX - startX;
-    let newY = e.clientY - startY;
+//     let newX = e.clientX - startX;
+//     let newY = e.clientY - startY;
 
-    newX = Math.min(newX, offsetX);
-    newX = Math.max(newX, 0);
-    newY = Math.min(newY, offsetY);
-    newY = Math.max(newY, 0);
-    console.log(`${offsetX}`)
-    console.log(`${offsetY}`)
-    // if(moveX > 950 || moveY > 715) {
-    //     isDragging = false;
-    // }
-    // if(moveX < -950 || moveY > 715) {
-    //     isDragging = false;
-    // }
-    // if(moveX > 950 || moveY < -715) {
-    //     isDragging = false;
-    // }
-    // if(moveX < -950 || moveY < -715 ) {
-    //     isDragging = false;
-    // } 
+//     newX = Math.min(newX, offsetX);
+//     newX = Math.max(newX, 0);
+//     newY = Math.min(newY, offsetY);
+//     newY = Math.max(newY, 0);
+//     console.log(`${offsetX}`)
+//     console.log(`${offsetY}`)
+//     // if(moveX > 950 || moveY > 715) {
+//     //     isDragging = false;
+//     // }
+//     // if(moveX < -950 || moveY > 715) {
+//     //     isDragging = false;
+//     // }
+//     // if(moveX > 950 || moveY < -715) {
+//     //     isDragging = false;
+//     // }
+//     // if(moveX < -950 || moveY < -715 ) {
+//     //     isDragging = false;
+//     // } 
 
-    wrap.style.left = `${newX}px`;
-    wrap.style.top = `${newY}px`;
+//     wrap.style.left = `${newX}px`;
+//     wrap.style.top = `${newY}px`;
 
-});
+// });
 
-wrap.addEventListener('mouseup', () => {
-    isDragging = false; 
-    wrap.style.cursor = 'grab';
-});
+// wrap.addEventListener('mouseup', () => {
+//     isDragging = false; 
+//     wrap.style.cursor = 'grab';
+// });
 
-wrap.addEventListener('mouseleave', () => {
-    isDragging = false;
-    wrap.style.cursor = 'grab';
-});
+// wrap.addEventListener('mouseleave', () => {
+//     isDragging = false;
+//     wrap.style.cursor = 'grab';
+// });
 
 
 

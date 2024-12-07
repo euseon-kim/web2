@@ -1,17 +1,18 @@
 body, html {margin: 0; padding: 0; overflow: hidden;}
 
-
-.wrap {
-    background-image: url(/image/bg.jpg);
-    width: 400vh;
-    height: 250vh;
-    background-size: cover; 
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.dragscroll {
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
-    cursor: grab; 
+    cursor: grab;
+    position: relative;
+}
+
+.content{
+    width: 4000px; 
+    height: 2500px;
+    background: url('/image/bg.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 .loading {
@@ -26,7 +27,6 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     transform: translate3d(0, 0, 0);
 }
 .wave {
-    /* opacity: 0.4; */
     position: absolute;
     bottom: 3%;
     top: 75%;
@@ -38,7 +38,6 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     transition-duration: 0.75s;
     transition-property: margin-bottom;
     transition-timing-function: ease;
-    /* margin-bottom: -250px; */
     animation: rotate 4300ms infinite linear, up 3100ms infinite linear;
   }
 
@@ -103,4 +102,421 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+
+
+
+/******************content*******************/
+.redCapParent {
+    position: relative;
+    z-index: 2;
+    width: 20vh;
+    height: 20vh;
+    left: 16vh;
+    top: 101vh;
+    background-color: transparent;
+}
+.redCap1 {
+    background-image: url(/image/cap1.png);
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-position: center;
+    left: 290px;
+    top: 965px;
+    animation: front 4s forwards infinite ;
+}
+
+@keyframes front {
+    100% {
+        left: 650px;
+        top: 1175px; 
+
+    }
+}
+/* .redCap2 {
+    background-image: url(/image/cap1.png);
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-position: center;
+    left: 57px;
+    top: 825px;
+    animation: front 10s forwards infinite ;
+}
+
+@keyframes front {
+    100% {
+        left: 650px;
+        top: 1175px; 
+
+    }
+} */
+
+.whiteCap1 {
+    background-image: url(/image/cap2.png);
+    width: 118px;
+    height: 160px;
+    position: absolute;
+    background-position: center;
+    left: 1054px;
+    top: 604px;
+    animation: front2 4s forwards infinite ;
+}
+
+@keyframes front2 {
+    100% {
+        left: 1306px;
+        top: 754px;
+    }
+}
+.men{
+    background-image: url(/image/men.png);
+    width: 240px;
+    height: 203px;
+    position: absolute;
+    background-position: center;
+    left: 1202px;
+    top: 800px;
+}
+
+.topCap1 {
+    background-image: url(/image/cap3.png);
+    width: 118px;
+    height: 160px;
+    position: absolute;
+    background-position: center;
+    left: 1256px;
+    top: 405px;
+    animation: front3 5s forwards infinite ;
+}
+
+@keyframes front3 {
+    100% {left: 1615px;
+        top: 618px;}
+}
+
+.blackCap1 {
+    background-image: url(/image/cap4.png);
+    width: 118px;
+    height: 160px;
+    position: absolute;
+    background-position: center;
+    left: 530px;
+    top: 262px;
+    animation: front4 5s forwards infinite ;
+}
+
+@keyframes front4 {
+    50%{
+        left: 238px;
+        top: 440px;
+    }
+    100% {
+        left: 439px;
+        top: 556px;
+    }
+}
+
+.redCapTap {
+    background-image: url(/image/tap.png);
+    width: 118px;
+    height: 160px;
+    position: absolute;
+    background-position: center;
+    left: 311px;
+    top: 587px;
+    animation: top 0.8s forwards infinite ;
+}
+
+@keyframes top {
+    100% {
+        top: 548px; ;
+        scale: 1.2;
+    }
+}
+
+.whiteCapTap {
+    background-image: url(/image/tap.png);
+    width: 118px;
+    height: 160px;
+    position: absolute;
+    background-position: center;
+    left: 1078px;
+    top: 286px;
+    animation: top1 0.8s forwards infinite ;
+}
+
+@keyframes top1 {
+    100% {
+        top: 259px;
+        scale: 1.1;
+    }
+}
+
+.topCapTap {
+    background-image: url(/image/tap.png);
+    width: 118px;
+    height: 160px;
+    position: absolute;
+    background-position: center;
+    left: 1202px;
+    top: 33px;
+    animation: top2 0.8s forwards infinite ;
+}
+
+@keyframes top2 {
+    100% {
+        top: -9px;
+        scale: 1.1;
+    }
+}
+
+.bottomCapTap {
+    background-image: url(/image/tap.png);
+    width: 118px;
+    height: 160px;
+    position: absolute;
+    background-position: center;
+    left: 123px;
+    top: 1320px;
+    animation: top3 0.8s forwards infinite ;
+}
+
+@keyframes top3 {
+    100% {
+        top: 1292px;
+        scale: 1.1;
+    }
+}
+
+.main{
+    background-image: url(/image/main.png);
+    width: 647px;
+    height: 554px;
+    position: absolute;
+    background-position: center;
+    left: 1788px;
+    top: 741px;
+    z-index: 5;
+    animation: rotation 2s forwards infinite ;
+}
+
+@keyframes rotation {
+    100% {rotate: -4deg;}
+}
+
+.mainCup {
+    background-image: url(/image/mainCup.png);
+    width: 251px;
+    height: 210px;
+    position: absolute;
+    background-position: center;
+    left: 1695px;
+    top: 1181px;
+    animation: rotation1 2s forwards infinite ;
+}
+
+@keyframes rotation1 {
+    0% {transform: rotateX(20deg);}
+    100% {  transform: rotateX(0deg);  }
+}
+
+
+.redCir {
+    background-image: url(/image/redCir.png);
+    width: 100px;
+    height: 111px;
+    position: absolute;
+    background-position: center;
+    right: -771px;
+    top: 298px;
+}
+
+.pinkCir {
+    background-image: url(/image/pinkCir.png);
+    width: 100px;
+    height: 121px;
+    position: absolute;
+    background-position: center;
+    right: -816px;
+    top: 304px;
+}
+
+.blueCir {
+    background-image: url(/image/blueCir.png);
+    width: 100px;
+    height: 122px;
+    position: absolute;
+    background-position: center;
+    right: -890px;
+    top: 264px;
+}
+
+.greenCir {
+    background-image: url(/image/greenCir.png);
+    width: 100px;
+    height: 118px;
+    position: absolute;
+    background-position: center;
+    right: -965px;
+    top: 221px;
+}
+
+.brownCir {
+    background-image: url(/image/brownCir.png);
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    background-position: center;
+    right: -1043px;
+    top: 177px;
+}
+
+.triangular {
+    background-image: url(/image/triangular.png);
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    background-position: center;
+    right: -895px;
+    top: 192px;
+}
+
+.topRightCap1 {
+    background-image: url(/image/cap5.png);
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    background-position: center;
+    right: -1266px;
+    top: 695px;
+    animation: front5 5s forwards infinite;
+}
+@keyframes front5 {
+    10% {right: -1266px; top: 813px;}
+    80% {right: -1755px;
+        top: 1107px;}
+    100% {right: -1621px;
+        top: 1211px;}
+}
+
+.silver {
+    background-image: url(/image/silver.png);
+    width: 500px;
+    height: 502px;
+    position: absolute;
+    background-position: center;
+    z-index: 5;
+    right: -1459px;
+    top: 546px;
+}
+
+.topRightMediumCap1 {
+    background-image: url(/image/cap5.png);
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    background-position: center;
+    right: -1575px;
+    top: 1247px;
+    /* animation: front6 5s forwards infinite; */
+}
+
+@keyframes front6 {
+    50% {
+        right: -1345px;
+        top: 1364px
+    }
+    100% {
+        right: -1575px;
+        top: 1247px;
+    }
+}
+
+.topRightLastCap1 {
+    background-image: url(/image/cap6.png);
+    width: 138px;
+    height: 152px;
+    position: absolute;
+    background-position: center;
+    right: -1106px;
+    top: 1452px;
+    animation: front7 5s forwards infinite;
+}
+
+@keyframes front7 {
+    30% {
+        right: -1009px;
+        top: 1547px;
+    }
+    100% {right: -1397px;
+        top: 1787px;}
+}
+
+.topRightPageCap{
+    background-image: url(/image/cap7.png);
+    width: 472px;
+    height: 426px;
+    position: absolute;
+    background-position: center;
+    right: -1680px;
+    top: 1507px;
+}
+
+.topRightPageCapTap {
+    background-image: url(/image/tap.png);
+    width: 118px;
+    height: 160px;
+    position: absolute;
+    background-position: center;
+    right: -1508px;
+    top: 1417px;
+    animation: top4 0.8s forwards infinite ;
+}
+
+@keyframes top4 {
+    100% {
+        top: 1379px;
+        scale: 1.1;
+    }
+}
+
+.cap8{
+    background-image: url(/image/cap8.png);
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    background-position: center;
+    right: -1180px;
+    top: 1488px;
+    animation: rotation3 1s forwards infinite;
+}
+@keyframes rotation3 {
+    100% {transform: rotateZ(20deg);}
+}
+
+.cap9{
+    background-image: url(/image/cap9.png);
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    background-position: center;
+    right: -1068px;
+    top: 1441px;
+    animation: rotation2 1s forwards infinite;
+}
+@keyframes rotation2 {
+    100% {transform: rotateZ(20deg);}
+}
+
+.crap1{
+    background-image: url(/image/crap1.png);
+    width: 184px;
+    height: 160px;
+    position: absolute;
+    background-position: center;
+    right: -1219px;
+    top: 1380px;    
 }
