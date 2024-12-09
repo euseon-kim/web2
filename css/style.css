@@ -153,8 +153,8 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     height: 494px;
     position: absolute;
     background-position: center;
-    left: 722px;
-    top: 381px;
+    left: 743px;
+    top: 368px;
     z-index: 50;
 }
 .belt5{
@@ -177,21 +177,51 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     top: 1699px;
     z-index: 50;
 }
-.redCap1 {
-    background-image: url(/image/cap1.png);
-    width: 150px;
-    height: 150px;
+.belt7 {
+    background-image: url(/image/belt7.png);
+    width: 934px;
+    height: 494px;
     position: absolute;
     background-position: center;
-    left: 290px;
-    top: 965px;
+    left: 1351px;
+    top: 1812px;
+    z-index: 50;
+}
+.belt8 {
+    background-image: url(/image/belt8.png);
+    width: 1000px;
+    height: 700px;
+    position: absolute;
+    background-position: center;
+    left: 583px;
+    top: 1072px;
+    z-index: 50;
+}
+.belt9 {
+    background-image: url(/image/belt9.png);
+    width: 1000px;
+    height: 700px;
+    position: absolute;
+    background-position: center;
+    left: 583px;
+    top: 1072px;
+    z-index: 50;
+}
+.redCap1 {
+    background-image: url(/image/cap12.png);
+    width: 368px;
+    height: 249px;
+    position: absolute;
+    background-position: center;
+    left: 24px;
+    top: 821px;
     animation: front 4s forwards infinite ;
 }
 
 @keyframes front {
     100% {
-        left: 650px;
-        top: 1175px; 
+        left: 860px;
+        top: 1312px;
 
     }
 }
@@ -215,20 +245,20 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
 } */
 
 .whiteCap1 {
-    background-image: url(/image/cap2.png);
-    width: 118px;
-    height: 160px;
+    background-image: url(/image/cap13.png);
+    width: 385px;
+    height: 213px;
     position: absolute;
     background-position: center;
-    left: 1054px;
-    top: 604px;
+    left: 748px;
+    top: 527px;
     animation: front2 4s forwards infinite ;
 }
 
 @keyframes front2 {
     100% {
-        left: 1306px;
-        top: 754px;
+        left: 1348px;
+        top: 892px;
     }
 }
 .men{
@@ -362,11 +392,30 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     top: 1961px;
     animation: front8 4s forwards infinite;
 }
-
 @keyframes front8 {
     100% {left: 586px;
         top: 1844px;}
 }
+
+.cap11 {
+    background-image: url(/image/cap11.png);
+    width: 163px;
+    height: 234px;
+    position: absolute;
+    background-position: center;
+    left: 538px;
+    top: 1784px;
+    animation: front9 6s ease infinite;
+}
+@keyframes front9 {
+    50% {       left: 1200px;
+        top: 2143px;}
+
+    100%{       left: 1522px;
+        top: 1962px;
+    }
+}
+
 
 .main{
     background-image: url(/image/main.png);
