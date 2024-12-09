@@ -117,6 +117,66 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     top: 101vh;
     background-color: transparent;
 }
+.belt1 {
+    background-image: url(/image/belt1.png);
+    width: 589px;
+    height: 731px;
+    position: absolute;
+    background-position: center;
+    left: -70px;
+    top: 552px;
+    z-index: 50;
+}
+.belt2 {
+    background-image: url(/image/belt2.png);
+    width: 581px;
+    height: 287px;
+    position: absolute;
+    background-position: center;
+    left: 347px;
+    top: 525px;
+    z-index: 50;
+}
+.belt3 {
+    background-image: url(/image/belt3.png);
+    width: 581px;
+    height: 287px;
+    position: absolute;
+    background-position: center;
+    left: 405px;
+    top: 149px;
+    z-index: 50;
+}
+.belt4{
+    background-image: url(/image/belt4.png);
+    width: 581px;
+    height: 494px;
+    position: absolute;
+    background-position: center;
+    left: 722px;
+    top: 381px;
+    z-index: 50;
+}
+.belt5{
+    background-image: url(/image/belt5.png);
+    width: 934px;
+    height: 494px;
+    position: absolute;
+    background-position: center;
+    left: 961px;
+    top: 138px;
+    z-index: 50;
+}
+.belt6 {
+    background-image: url(/image/belt6.png);
+    width: 934px;
+    height: 494px;
+    position: absolute;
+    background-position: center;
+    left: 188px;
+    top: 1699px;
+    z-index: 50;
+}
 .redCap1 {
     background-image: url(/image/cap1.png);
     width: 150px;
@@ -228,6 +288,7 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     left: 311px;
     top: 587px;
     animation: top 0.8s forwards infinite ;
+    z-index: 100;
 }
 
 @keyframes top {
@@ -246,6 +307,7 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     left: 1078px;
     top: 286px;
     animation: top1 0.8s forwards infinite ;
+    z-index: 100;
 }
 
 @keyframes top1 {
@@ -290,6 +352,21 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
         scale: 1.1;
     }
 }
+.cap10{
+    background-image: url(/image/cap10.png);
+    width: 657px;
+    height: 234px;
+    position: absolute;
+    background-position: center;
+    left: 392px;
+    top: 1961px;
+    animation: front8 4s forwards infinite;
+}
+
+@keyframes front8 {
+    100% {left: 586px;
+        top: 1844px;}
+}
 
 .main{
     background-image: url(/image/main.png);
@@ -330,7 +407,7 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     height: 111px;
     position: absolute;
     background-position: center;
-    right: -771px;
+    left: 2581px;
     top: 298px;
 }
 
@@ -340,7 +417,7 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     height: 121px;
     position: absolute;
     background-position: center;
-    right: -816px;
+    left: 2633px;
     top: 304px;
 }
 
@@ -350,9 +427,10 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     height: 122px;
     position: absolute;
     background-position: center;
-    right: -890px;
-    top: 264px;
+    left: 2713px;
+    top: 258px;
 }
+
 
 .greenCir {
     background-image: url(/image/greenCir.png);
@@ -360,8 +438,8 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     height: 118px;
     position: absolute;
     background-position: center;
-    right: -965px;
-    top: 221px;
+    left: 2795px;
+    top: 213px;
 }
 
 .brownCir {
@@ -370,8 +448,8 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     height: 120px;
     position: absolute;
     background-position: center;
-    right: -1043px;
-    top: 177px;
+    left: 2881px;
+    top: 165px;
 }
 
 .triangular {
@@ -380,8 +458,8 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     height: 120px;
     position: absolute;
     background-position: center;
-    right: -895px;
-    top: 192px;
+    left: 2723px;
+    top: 186px;
 }
 
 .topRightCap1 {
@@ -390,16 +468,17 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     height: 120px;
     position: absolute;
     background-position: center;
-    right: -1266px;
+    left: 3085px;
     top: 695px;
     animation: front5 5s forwards infinite;
 }
 @keyframes front5 {
-    10% {right: -1266px; top: 813px;}
-    80% {right: -1755px;
-        top: 1107px;}
-    100% {right: -1621px;
-        top: 1211px;}
+    10% {    left: 3085px;
+        top: 820px;}
+    80% {left: 3569px;
+        top: 1104px;}
+    100% {left: 3434px;
+        top: 1223px;}
 }
 
 .silver {
@@ -409,7 +488,7 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     position: absolute;
     background-position: center;
     z-index: 5;
-    right: -1459px;
+    left: 2879px;
     top: 546px;
 }
 
@@ -419,7 +498,7 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     height: 120px;
     position: absolute;
     background-position: center;
-    right: -1575px;
+    left: 3390px;
     top: 1247px;
     /* animation: front6 5s forwards infinite; */
 }
@@ -441,18 +520,18 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     height: 152px;
     position: absolute;
     background-position: center;
-    right: -1106px;
+    left: 2902px;
     top: 1452px;
     animation: front7 5s forwards infinite;
 }
 
 @keyframes front7 {
     30% {
-        right: -1009px;
-        top: 1547px;
+        left: 2790px;
+        top: 1535px;
     }
-    100% {right: -1397px;
-        top: 1787px;}
+    100% {    left: 3180px;
+        top: 1790px;}
 }
 
 .topRightPageCap{
@@ -461,8 +540,8 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     height: 426px;
     position: absolute;
     background-position: center;
-    right: -1680px;
-    top: 1507px;
+    left: 3127px;
+    top: 1512px;
 }
 
 .topRightPageCapTap {
@@ -471,7 +550,7 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     height: 160px;
     position: absolute;
     background-position: center;
-    right: -1508px;
+    left: 3306px;
     top: 1417px;
     animation: top4 0.8s forwards infinite ;
 }
@@ -489,7 +568,7 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     height: 120px;
     position: absolute;
     background-position: center;
-    right: -1180px;
+    left: 3000px;
     top: 1488px;
     animation: rotation3 1s forwards infinite;
 }
@@ -503,7 +582,7 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     height: 120px;
     position: absolute;
     background-position: center;
-    right: -1068px;
+    left: 2888px;
     top: 1441px;
     animation: rotation2 1s forwards infinite;
 }
@@ -517,6 +596,7 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     height: 160px;
     position: absolute;
     background-position: center;
-    right: -1219px;
-    top: 1380px;    
+    left: 2955px;
+    top: 1379px;
+
 }
