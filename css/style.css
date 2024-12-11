@@ -88,9 +88,6 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
 
 .mainContent {
     display: none;
-    opacity: 1;
-
-    transition: opacity 2s ease;
 }
 
 .show-mainContent {
@@ -692,10 +689,49 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
 }
 
 #page3{
-    background-image: url(/image/page3.jpg);
-    width: 100%;
-    height: 100%;
+    background-image: url(/image/page3.png) ;
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 640px;
     position: absolute;
     z-index: 1000;
+    display: none;
+    top: 1319px;
+    left: 2172px;
+}
+
+.backPage3 {
+    background-image: url(/image/page3-1.png) ;
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 640px;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    top: 1319px;
+    left: 2172px;
+}
+
+.text {
+    background-image: url(/image/backTable.png);
+    background-position: center;
+    width: 153px;
+    height: 45px;
+    position: absolute;
+    z-index: 1001;
+    top: 526px;
+    left: 111px;
+    display: none;
+}
+
+.x_1 {
+    background-image: url(/image/x-1.png);
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 1001;
+    top: 1373px;
+    left: 3175px;
     display: none;
 }

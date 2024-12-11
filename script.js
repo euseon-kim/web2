@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 28); 
 
     const loader = document.querySelector('.loading');
-    const mainContent = document.querySelector('.mainContent');
+    let dragscroll = document.querySelector('.dragscroll');
 
     setTimeout(function () {
         loader.classList.add('hide-loading');
-        mainContent.classList.add('show-mainContent');
+        dragscroll.classList.add('show-mainContent');
     }, 3000);
 
     const intro = document.querySelector('.intro');
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 500);
     });
 
-    const dragscroll = document.querySelector('.dragscroll');
+
     const content = document.querySelector('.content');
 
     // 드래그 가능한 영역 크기
@@ -56,15 +56,18 @@ const page1 = document.querySelector('#page1');
 const page2 = document.querySelector('#page2');
 const page3 = document.querySelector('#page3');
 const x = document.querySelector('.x');
+const x1 = document.querySelector(".x_1");
 const bottomCapTap = document.querySelector(".bottomCapTap");
 const topRightPageCapTap = document.querySelector(".topRightPageCapTap");
+const text = document.querySelector('.text');
+const backPage3 = document.querySelector(".backPage3");
 
 redCapTap.addEventListener('click', function() {
 
     page1.style.display = 'block';
     x.style.display='block';
 
-    dragscroll.style.display = 'none';
+    dragscroll.classList.add('mainContent');
 });
 whiteCapTap.addEventListener('click', function() {
 
@@ -96,9 +99,21 @@ bottomCapTap.addEventListener('click', function() {
     }
 });
 
-
 topRightPageCapTap.addEventListener('click', function() {
-    
     page3.style.display = 'block';
-    // dragscroll.style.display = 'none';
+    text.style.display = 'block';
+    x1.style.display = 'block'
+});
+
+x1.addEventListener('click',function(){
+    
+    page3.style.display = 'none';
+    
+
+})
+
+text.addEventListener('click', function() {
+    page3.style.display = 'none';
+    text.style.display = 'block';
+    backPage3.style.display = 'block';
 });
