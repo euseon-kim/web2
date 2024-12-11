@@ -83,6 +83,7 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     z-index: 100; 
     cursor: pointer; 
     transition: opacity 0.5s ease;
+    z-index: 101;
 }
 
 .mainContent {
@@ -198,13 +199,13 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     z-index: 50;
 }
 .belt9 {
-    background-image: url(/image/belt9.png);
-    width: 1000px;
-    height: 700px;
+    background-image: url(/image/belt10.png);
+    width: 1594px;
+    height: 1168px;
     position: absolute;
     background-position: center;
     left: 583px;
-    top: 1072px;
+    top: 447px;
     z-index: 50;
 }
 .redCap1 {
@@ -272,19 +273,19 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
 }
 
 .topCap1 {
-    background-image: url(/image/cap3.png);
-    width: 118px;
-    height: 160px;
+    background-image: url(/image/cap14.png);
+    width: 457px;
+    height: 261px;
     position: absolute;
     background-position: center;
-    left: 1256px;
-    top: 405px;
-    animation: front3 5s forwards infinite ;
+    left: 845px;
+    top: 217px;
+    animation: front3 4s forwards infinite ;
 }
 
 @keyframes front3 {
-    100% {left: 1615px;
-        top: 618px;}
+    100% {left: 1642px;
+        top: 672px;}
 }
 
 .blackCap1 {
@@ -304,8 +305,8 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
         top: 440px;
     }
     100% {
-        left: 439px;
-        top: 556px;
+        left: 556px;
+        top: 611px;
     }
 }
 
@@ -425,7 +426,7 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     background-position: center;
     left: 1788px;
     top: 741px;
-    z-index: 5;
+    z-index: 100;
     animation: rotation 2s forwards infinite ;
 }
 
@@ -648,4 +649,53 @@ body, html {margin: 0; padding: 0; overflow: hidden;}
     left: 2955px;
     top: 1379px;
 
+}
+
+
+
+/************************page**********************/
+
+#page1 {
+    background-image: url(/image/page1.png);
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    display: none;
+}
+
+.x {
+    background-image: url(/image/x.png);
+    background-position: center;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 1001;
+    display: none;
+    top: 20px;
+    left: 1850px;
+
+}
+
+#page2 {
+    background-image: url(/image/page2.png);
+    background-position: center;
+    width: 916px;
+    height: 594px;
+    position: absolute;
+    z-index: 1000;
+    top: 1619px;
+    left: 380px;
+    display: none;
+}
+
+#page3{
+    background-image: url(/image/page3.jpg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+    display: none;
 }

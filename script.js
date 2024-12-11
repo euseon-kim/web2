@@ -48,169 +48,57 @@ document.addEventListener("DOMContentLoaded", function () {
     
 })
 
-// const wrap = document.querySelector('.wrap');
-// const isDragging = false;  
-// let startX, startY;    
-// const offsetX = 0, offsetY = 0; 
 
-// wrap.addEventListener('mousedown', (e) => {
-//     isDragging = true;  
-//     startX = e.pageX - offsetX;  
-//     startY = e.pageY - offsetY;  
-//     wrap.style.cursor = 'grabbing';
-//     e.preventDefault();
-// });
+const redCapTap = document.querySelector('.redCapTap');
+const whiteCapTap = document.querySelector('.whiteCapTap');
+const topCapTap = document.querySelector('.topCapTap');
+const page1 = document.querySelector('#page1');
+const page2 = document.querySelector('#page2');
+const page3 = document.querySelector('#page3');
+const x = document.querySelector('.x');
+const bottomCapTap = document.querySelector(".bottomCapTap");
+const topRightPageCapTap = document.querySelector(".topRightPageCapTap");
 
-// wrap.addEventListener('mousemove', (e) => {
+redCapTap.addEventListener('click', function() {
 
-//     const box = document.querySelector('.wrap');
-//     if (!isDragging) return;  
+    page1.style.display = 'block';
+    x.style.display='block';
 
-//     const moveX = e.pageX - startX;  
-//     const moveY = e.pageY - startY; 
+    dragscroll.style.display = 'none';
+});
+whiteCapTap.addEventListener('click', function() {
 
-//     offsetX = moveX;  
-//     offsetY = moveY;
-//     // console.log(`${moveX}`)
-//     // console.log(`${moveY}`)
-//     console.log(`${offsetX}`)
-//     console.log(`${offsetY}`)
-//     // if(moveX > 950 || moveY > 715) {
-//     //     isDragging = false;
-//     // }
-//     // if(moveX < -950 || moveY > 715) {
-//     //     isDragging = false;
-//     // }
-//     // if(moveX > 950 || moveY < -715) {
-//     //     isDragging = false;
-//     // }
-//     // if(moveX < -950 || moveY < -715 ) {
-//     //     isDragging = false;
-//     // } 
+    page1.style.display = 'block';
+    x.style.display='block';
 
-//     wrap.style.transform = `translate(-50%, -50%) translate(${moveX}px, ${moveY}px)`;
+    dragscroll.style.display = 'none';
+});
+topCapTap.addEventListener('click', function() {
 
-// });
+    page1.style.display = 'block';
+    x.style.display='block';
 
-// wrap.addEventListener('mouseup', () => {
-
+    dragscroll.style.display = 'none';
+});
+x.addEventListener('click',function(){
     
-//     isDragging = false; 
-//     wrap.style.cursor = 'grab';
-// });
+    page1.style.display = 'none';
+    x.style.display='none';
 
-// wrap.addEventListener('mouseleave', () => {
-//     isDragging = false;
-//     wrap.style.cursor = 'grab';
-// });
+    dragscroll.style.display='block';
+})
 
-
-// const wrap = document.querySelector('.wrap');
-// let isDragging = false;  
-// let startX, startY;    
-// const offsetX = 1920, offsetY = 1190; 
-
-// wrap.addEventListener('mousedown', (e) => {
-//     isDragging = true;  
-//     startX = e.clientX - wrap.offsetLeft;
-//     startY = e.clientY - wrap.offsetTop;
-//     wrap.style.cursor = 'grabbing';
-//     e.preventDefault();
-// });
-
-// wrap.addEventListener('mousemove', (e) => {
-
-//     const box = document.querySelector('.wrap');
-//     if (!isDragging) return;  
-
-//     let newX = e.clientX - startX;
-//     let newY = e.clientY - startY;
-
-//     newX = Math.min(newX, offsetX);
-//     newX = Math.max(newX, 0);
-//     newY = Math.min(newY, offsetY);
-//     newY = Math.max(newY, 0);
-//     console.log(`${offsetX}`)
-//     console.log(`${offsetY}`)
-//     // if(moveX > 950 || moveY > 715) {
-//     //     isDragging = false;
-//     // }
-//     // if(moveX < -950 || moveY > 715) {
-//     //     isDragging = false;
-//     // }
-//     // if(moveX > 950 || moveY < -715) {
-//     //     isDragging = false;
-//     // }
-//     // if(moveX < -950 || moveY < -715 ) {
-//     //     isDragging = false;
-//     // } 
-
-//     wrap.style.left = `${newX}px`;
-//     wrap.style.top = `${newY}px`;
-
-// });
-
-// wrap.addEventListener('mouseup', () => {
-//     isDragging = false; 
-//     wrap.style.cursor = 'grab';
-// });
-
-// wrap.addEventListener('mouseleave', () => {
-//     isDragging = false;
-//     wrap.style.cursor = 'grab';
-// });
+bottomCapTap.addEventListener('click', function() {
+    if (page2.style.display === 'block') {
+        page2.style.display = 'none';
+    } else {
+        page2.style.display = 'block';
+    }
+});
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    // const container = document.querySelector('.wrap');
-    // let isDown = false;
-    // let startX, startY, scrollLeft, scrollTop;
-
-    // container.addEventListener('mousedown', (e) => {
-    //     isDown = true;
-    //     startX = e.pageX - container.offsetLeft;  
-    //     startY = e.pageY - container.offsetTop;   
-    //     scrollLeft = container.scrollLeft;       
-    //     scrollTop = container.scrollTop;       
-    //     container.style.cursor = 'grabbing';     
-    //     e.preventDefault();
-    // });
-
-
-    // container.addEventListener('mouseup', () => {
-    //     isDown = false;
-    //     container.style.cursor = 'grab';          
-    // });
-
+topRightPageCapTap.addEventListener('click', function() {
     
-    // container.addEventListener('mouseleave', () => {
-    //     isDown = false;
-    //     container.style.cursor = 'grab';           
-    // });
-
-
-    // container.addEventListener('mousemove', (e) => {
-    //     if (!isDown) return;  
-    //     e.preventDefault();
-
-
-    //     const moveX = e.pageX - container.offsetLeft;
-    //     const moveY = e.pageY - container.offsetTop;
-    //     const walkX = moveX - startX;  
-    //     const walkY = moveY - startY; 
-
-    //     container.scrollLeft = scrollLeft - walkX;
-    //     container.scrollTop = scrollTop - walkY;
-    // });
-
+    page3.style.display = 'block';
+    // dragscroll.style.display = 'none';
+});
